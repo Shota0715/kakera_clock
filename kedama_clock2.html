@@ -19,13 +19,14 @@ body{
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #fff;/* ベースカラー */
+  background-color: green;/* 時計外の背景色 */
 }
 
 .nowtime{
   margin-top: 15px;
   margin-left: 15px;
-  width:370px;
-  padding: 30px 60px;
+  width:400px;
+  padding: 15px;
   border-radius: 10px 10px 10px 10px;
   background: rgba(252, 88, 176, 1);/* 背景色 */
 }
@@ -46,14 +47,6 @@ body{
   49%  { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 0; }
-}
-
-/** 外枠 **/
-.flame{
-  border: solid 2px;
-  border-color: currentColor;/* 外枠の線の色 */
-  border-radius: 5px;/* 外枠の線の太さ */
-  padding: 10px 0;
 }
 
 /** LIVE **/
@@ -125,7 +118,6 @@ body{
 </head>  
 <body>
 <div class="nowtime">
-  <div class="flame">
     <div class="kedama">
       <svg 
         id="kedama_svg"
@@ -523,7 +515,6 @@ body{
     </script>
     <div class="pl pl-triangle"></div>
     <p id="live">LIVE</p>
-  </div>
 </div>
 </body>
 </html>

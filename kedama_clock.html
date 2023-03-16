@@ -19,7 +19,8 @@
 body{
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  color: #fff;/* ベースカラー */
+  color: #fff;/* ベースカラー(フォント色等) */
+  background-color: green;/* 時計外の背景色 */
 }
 
 .nowtime{
@@ -29,7 +30,7 @@ body{
   width: 450px; 
   padding : 5px 0px 5px 50px;
   border-radius: 10px 10px 10px 10px;
-  background: rgba(252, 88, 176, 1);/* 背景色 */
+  background-color: rgba(252, 88, 176, 1);/* 時計の背景色 */
 }
 
 .clock{
@@ -63,6 +64,7 @@ body{
   /* 外枠のサイズ */
   height: 230px;
   width: 400px;
+  fill: none;/* 枠内の背景色 */
 }
 #frame_path{
   stroke: currentColor;/* 外枠の線の色 */
@@ -91,7 +93,7 @@ body{
 	height: 27px;
 }
 .pl:before, .pl:after{
-	background: currentColor;
+	background: currentColor;/* リボンの色(currentColorはベースカラーと同じ) */
 	content: "";
 	display: block;
 	position: absolute;
@@ -129,15 +131,16 @@ body{
 #kedama_svg{
   margin-left: -57px;
   height: 100px;
-  fill: currentColor;
+  fill: currentColor;/* 毛玉の色(currentColorはベースカラーと同じ) */
   transform: scale(1, 1) rotate(0deg);
 }
 #kedama_svg_right{
   margin-left: 200px;
   height: 100px;
-  fill: currentColor;
+  fill: currentColor;/* 毛玉の色(currentColorはベースカラーと同じ) */
   transform: scale(-1,1) rotate(0deg);
 }
+
 </style>
 </head>  
 <body>
@@ -147,7 +150,7 @@ body{
     id="frame_svg"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1176 692">
-    <path id="frame_path" fill="none" d="M 55.00,591.00
+    <path id="frame_path" d="M 55.00,591.00
             C 52.40,588.67 53.01,586.32 53.00,583.00
               53.00,583.00 53.00,564.00 53.00,564.00
               53.00,564.00 53.00,484.00 53.00,484.00
